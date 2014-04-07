@@ -57,6 +57,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'Valloric/YouCompleteMe'
 " Tabular allows you to align things prettily around a pivot char
 Plugin 'godlygeek/tabular'
+" Ansible YAML file support
+Bundle 'chase/vim-ansible-yaml'
 " #################
 " <leader>W removes trailing whitespace, neat!
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
