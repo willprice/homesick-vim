@@ -1,0 +1,3 @@
+# Use Vundle 
+system "vim +PluginInstall +qall"
+# vim: set ft=ruby

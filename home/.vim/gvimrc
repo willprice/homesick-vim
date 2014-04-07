@@ -1,0 +1,6 @@
+" Setup graphical options
+set guifont=Terminus\ 10
+set guioptions+=m
+set background=dark
+set visualbell
+colorscheme solarized

@@ -1,0 +1,192 @@
+" Setting this first prevents hiccups due to compatibility
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/vundle'
+
+" #### BUNDLES ####
+" Git wrapper
+Plugin 'tpope/vim-fugitive'
+" Better matching bracket support
+Plugin 'tpope/vim-unimpaired'
+" Surround text objects with things
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-classpath'
+" Markdown syntax
+Plugin 'tpope/vim-markdown'
+" Clojure REPL
+Plugin 'tpope/vim-fireplace'
+" HAML syntax
+Plugin 'tpope/vim-haml'
+" Python everything!
+Plugin 'klen/python-mode'
+" Write HTML more easily
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Clojure syntax & completion
+Plugin 'guns/vim-clojure-static'
+" TDD green toolbar
+Plugin 'reinh/vim-makegreen'
+" Quickly find files
+Plugin 'wincent/Command-T'
+" Run processing sketches from within vim
+Plugin 'sophacles/vim-processing'
+" Syntax checking for most languages (linter)
+Plugin 'scrooloose/syntastic'
+" File tree browser
+Plugin 'scrooloose/nerdtree'
+" Easy commenting
+Plugin 'scrooloose/nerdcommenter'
+" Browse tags in a toolbar
+Plugin 'majutsushi/tagbar'
+" Static JS analysis
+Plugin 'marijnh/tern_for_vim'
+" IO syntax
+Plugin 'andreimaxim/vim-io'
+" Nodeunit as a vim compiler
+Plugin 'lambdalisue/nodeunit.vim'
+" JSHint2, JS linter
+Plugin 'Shutnik/jshint2.vim'
+" The best colorscheme of all time.
+Plugin 'altercation/vim-colors-solarized'
+" Completion for loads of languages
+Plugin 'Valloric/YouCompleteMe'
+" Tabular allows you to align things prettily around a pivot char
+Plugin 'godlygeek/tabular'
+" #################
+" <leader>W removes trailing whitespace, neat!
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" Tired of using esc for normal mode
+inoremap jj <ESC>
+
+" Autocomplete like eclipse
+inoremap <C-Space> <C-x><C-o>
+inoremap <C-@>     <C-x><C-o>
+" Nicer command for vertical window splitting
+nnoremap <leader>w <C-w>v<C-w>l
+
+
+" Tab shortcuts
+nnoremap <right> :tabn<cr>
+nnoremap <left> :tabp<cr>
+
+" wrapped lines navigation
+nnoremap j gj
+nnoremap k gk
+
+" Easier window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" hlsearch toggle
+nnoremap <F1> :set hlsearch!<cr>
+
+" Toggle NERDTree easily with F3
+nnoremap <F3> :NERDTreeToggle<cr>
+
+" Toggle whitespace characters
+nnoremap <F4> :set list!<cr>
+
+" Tagbar toggle 
+nnoremap <F8> :TagbarToggle<CR>
+
+" Switch lines
+nnoremap - ddp
+
+" Set leader
+let mapleader=','
+
+" edit vim
+nnoremap <leader>ev :vsplit ~/.vimrc<CR>
+
+" source vim
+nnoremap <leader>sv :source ~/.vimrc<CR>
+" --------------------------------------
+"  EDITOR STUFF
+" --------------------------------------
+
+" Backspace expected behaviour
+set backspace=indent,eol,start
+
+" Don't be compatible with vi any longer
+
+
+" Hide buffers that aren't visible
+set hidden
+
+" Don't update the display while executing macros
+set lazyredraw
+
+" At least let yourself know what mode you're in
+set showmode
+
+" Enable enhanced command-line completion. Presumes you have compiled
+" with +wildmenu.  See :help 'wildmenu'
+set wildmenu
+
+" Wrap lines when vim can't display all of it
+set wrap
+
+" Set decent length history
+set history=1000
+
+" Add mouse support in the terminal - for scrolling only...
+set mouse=a
+
+" Set highlight search
+set hlsearch
+
+" Set incremental searching
+set incsearch
+
+" Work in screen
+set t_Co=256
+
+" Set up some "/" properties
+set smartcase
+
+" Set line numbering
+set number
+
+" Hide mouse pointer when typing
+set mousehide
+
+" Syntax coloring line limiting (large files take too long to load otherwise)
+set synmaxcol=2048
+
+" Set the status line the way I like it
+set stl=%f\ %m\ %r\ Line:\ %l/%L[%p%%]\ Col:\ %c\ Buf:\ #%n\ [%b][0x%B]
+
+" Indenting
+set smartindent
+
+" Set tab spaces
+set expandtab
+set tabstop=2
+set shiftwidth=2
+
+" Show whitespace
+set listchars=tab:▸\ ,eol:$
+" Set virtualedit up
+set virtualedit=all
+
+" Save folds!
+au BufWinLeave * silent! mkview
+au BufWinEnter * silent! loadview
+
+" Get that filetype stuff happening
+filetype plugin indent on
+
+" Turn on that syntax highlighting
+syntax on
+
+
+colorscheme solarized
+set background=light
