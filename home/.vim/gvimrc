@@ -1,6 +1,6 @@
 " Setup graphical options
-set guifont=Terminus\ 10
-set guioptions+=m
+set guifont=Terminus\ 11
+set guioptions=aPem
 set background=dark
-set visualbell
+set novisualbell
 colorscheme solarized
