@@ -1,5 +1,5 @@
 " Kalisi
-Bundle 'https://github.com/freeo/vim-kalisi'   
+Bundle 'freeo/vim-kalisi'
 " Base16
 Plugin 'chriskempson/base16-vim'
 " Wombat

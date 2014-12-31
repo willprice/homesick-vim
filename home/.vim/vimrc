@@ -7,15 +7,18 @@ set encoding=utf-8
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" Set leader
+let mapleader=','
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 
-" #### BUNDLES ####
-source ~/.vim/config/syntax.vim
-source ~/.vim/config/themes.vim
-source ~/.vim/config/productivity.vim
 
+
+" #### BUNDLES ####
+for file in split(globpath(expand('~/.vim/config'), '*\.vim'), '\n')
+  exe 'source' file
+endfor
 
 " ##### MAPS ######
 " <leader>W removes trailing whitespace, neat!
@@ -59,8 +62,6 @@ nnoremap <F8> :TagbarToggle<CR>
 " Switch lines
 nnoremap - ddp
 
-" Set leader
-let mapleader=','
 
 " edit vim
 nnoremap <leader>ev :vsplit ~/.vimrc<CR>
@@ -153,3 +154,5 @@ set laststatus=2
 colorscheme Tomorrow
 set background=light
 
+let g:ycm_server_use_vim_stdout = 1
+let g:ycm_server_log_level = 'debug'

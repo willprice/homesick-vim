@@ -1,22 +1,18 @@
-snippet base {
+snippet base
 	---
 	title:"${1}"
 	layout:"${2}"
 	---
-}
 
-snippet hl {
+snippet hl
 	{% highlight ${1:type} %}
 	${2:code}
 	{% endhighlight %}
-}
 
-snippet hlinc {
+snippet hlinc
 	{% highlight ${1:type} %}
 	{% include ${2:_includes/myfile} %}
 	{% endhighlight %}
-}
 
-snippet inc {
+snippet inc
 	{% include ${1:_includes/myfile} %}
-}
