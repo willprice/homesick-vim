@@ -51,6 +51,7 @@ Plug 'jpalardy/vim-slime'
 " window management
 Plug 'zhaocai/GoldenView.vim'
 
+Plug 'bling/vim-airline'
 " ##########################
 " TOOLBARS
 " ##########################
