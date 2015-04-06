@@ -42,6 +42,10 @@ Plug 'groenewege/vim-less'
 Plug 'digitaltoad/vim-jade'
 " HAML
 Plug 'tpope/vim-haml'
+" HTML5
+Plug 'othree/html5.vim'
+" Emmet - expand CSS like selectors into HTML
+Plug 'mattn/emmet-vim'
 
 
 " ##########################
@@ -73,6 +77,8 @@ Plug 'lambdatoast/elm.vim'
 Plug 'andreimaxim/vim-io'
 " Nimrod
 Plug 'zah/nimrod.vim'
+" Go
+Plug 'fatih/vim-go'
 
 " ### ELECTRONICS ###
 " VHDL
