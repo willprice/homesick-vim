@@ -1,30 +1,39 @@
 " Coffee script
-Plugin 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script'
 " SCons
-Plugin 'vim-scripts/scons.vim'
+Plug 'vim-scripts/scons.vim'
 " VHDL
-Plugin 'git://gitorious.org/vip/vip.git'
+Plug 'git://gitorious.org/vip/vip.git'
 " Ansible YAML
-Plugin 'chase/vim-ansible-yaml'
+Plug 'chase/vim-ansible-yaml'
 " Io
-Plugin 'andreimaxim/vim-io'
+Plug 'andreimaxim/vim-io'
 " HAML
-Plugin 'tpope/vim-haml'
+Plug 'tpope/vim-haml'
 " Markdown
-Plugin 'tpope/vim-markdown', {'name': 'tpope-vim-markdown'}
+Plug 'tpope/vim-markdown', {'name': 'tpope-vim-markdown'}
 " ASCIIDoc
-Plugin 'dagwieers/asciidoc-vim'
+Plug 'dagwieers/asciidoc-vim'
 " Rust
-Plugin 'wting/rust.vim'
+Plug 'wting/rust.vim'
 " Dockerfiles
-Plugin 'ekalinin/Dockerfile.vim'
+Plug 'ekalinin/Dockerfile.vim'
 " ANTLR 4 plugin
-Plugin 'jrozner/vim-antlr'
+Plug 'jrozner/vim-antlr'
 " ANTLR 3 plguin
-Plugin 'vim-scripts/antlr3.vim'
+Plug 'vim-scripts/antlr3.vim'
 " LESS
-Plugin 'groenewege/vim-less'
+Plug 'groenewege/vim-less'
 " Jade
-Plugin 'digitaltoad/vim-jade'
+Plug 'digitaltoad/vim-jade'
 " Elm
-Plugin 'lambdatoast/elm.vim'
+Plug 'lambdatoast/elm.vim'
+" GAS assembly
+Plug 'willprice/vim-gas'
+" Nimrod
+Plug 'zah/nimrod.vim'
+
+if (exists('+colorcolumn'))
+  set colorcolumn=80
+  highlight ColorColumn ctermbg=9
+endif

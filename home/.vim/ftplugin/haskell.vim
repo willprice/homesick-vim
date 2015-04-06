@@ -13,7 +13,7 @@ au FileType haskell nnoremap <buffer> <leader>c :HdevtoolsClear<CR>"
 au FileType haskell nnoremap <buffer> <leader>i :HdevtoolsInfo<CR>
 
 " vim2hs config
-au FileType haskell compiler cabal " Use cabal for type-checking
+au FileType haskell compiler ghc   " Enables haskell-mode's type insertion shortcuts
 let g:haskell_conceal_wide = 1     " Replace -> with unicode chars etc
 
 let g:hpaste_author = "Will Price"

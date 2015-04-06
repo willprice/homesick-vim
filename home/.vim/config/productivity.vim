@@ -3,16 +3,11 @@
 " ######################
 
 " Multiple cursors
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-multiple-cursors'
 " HTML DSL
-Plugin 'mattn/emmet-vim' " Tabular: align things around a pivot char
-" Tabular: Produce table around a pivot character
-Plugin 'godlygeek/tabular'
-" Table-mode: Easily create tables and manipulate them, must run
-" :TableModeEnable to activate before you can use
-Plugin 'dhruvasagar/vim-table-mode'
+Plug 'mattn/emmet-vim' " Tabular: align things around a pivot char
 " Easy commenting
-Plugin 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 
 
 
@@ -21,9 +16,9 @@ Plugin 'scrooloose/nerdcommenter'
 " ##########################
 "
 " Nodeunit vim compiler
-Plugin 'lambdalisue/nodeunit.vim'
+Plug 'lambdalisue/nodeunit.vim'
 " TDD green toolbar
-Plugin 'reinh/vim-makegreen'
+Plug 'reinh/vim-makegreen'
 
 
 
@@ -32,9 +27,9 @@ Plugin 'reinh/vim-makegreen'
 " ##########################
 
 " Better matching bracket support
-Plugin 'tpope/vim-unimpaired'
+Plug 'tpope/vim-unimpaired'
 " Surround text objects with things
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
 
 
@@ -43,21 +38,21 @@ Plugin 'tpope/vim-surround'
 " ##########################
 
 " Static JS analysis
-Plugin 'marijnh/tern_for_vim'
+Plug 'marijnh/tern_for_vim'
 " Clojure syntax & completion
-Plugin 'guns/vim-clojure-static'
+Plug 'guns/vim-clojure-static'
 " Python everything!
-Plugin 'klen/python-mode'
+Plug 'klen/python-mode'
 " Run processing sketches from within vim
-Plugin 'sophacles/vim-processing'
+Plug 'sophacles/vim-processing'
 " Clojure REPL
-Plugin 'tpope/vim-fireplace'
+Plug 'tpope/vim-fireplace'
 
 " ## GENERIC ##
 " Completion for loads of languages
-Plugin 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 " Syntax checking for most languages (linter)
-Plugin 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 
 
 " ##########################
@@ -65,9 +60,9 @@ Plugin 'scrooloose/syntastic'
 " ##########################
 "
 " UltiSnips, a snippet engine that is compatible with YCM
-Plugin 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 " Snippets for UltiSnips
-Plugin 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 let g:UltiSnipsJumpForwardTrigger="<c-f>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
@@ -76,29 +71,36 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="vertical"
 
 " Quickly find files
-Plugin 'wincent/Command-T'
+Plug 'Shougo/unite.vim'
 " Git wrapper
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 " Editorconfig support: reads a .editorconfig file to keep editor configs
 " consistent across multiple dev machines
-Plugin 'editorconfig/editorconfig-vim'
+Plug 'editorconfig/editorconfig-vim'
 
 " Livedown, automatically refresh markdown generated HTML
-Plugin 'shime/vim-livedown'
+Plug 'shime/vim-livedown'
 
 " TMUX to vim communication
-Plugin 'jpalardy/vim-slime'
+Plug 'jpalardy/vim-slime'
+let g:slime_python_ipython=1
 let g:slime_target="tmux"
 let g:slime_paste_file=tempname()
+
+" window management
+Plug 'zhaocai/GoldenView.vim'
+nmap <silent> <C-N>  <Plug>GoldenViewNext
+nmap <silent> <C-P>  <Plug>GoldenViewPrevious
 
 " ##########################
 " TOOLBARS
 " ##########################
 
 " Browse tags in a toolbar
-Plugin 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 nmap <leader>= :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
 " File tree browser
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'

@@ -1,17 +1,17 @@
 " Haskell hdevtools plugin (aids syntastic)
- Plugin 'bitc/vim-hdevtools'
+ Plug 'bitc/vim-hdevtools', { 'for': 'haskell' }
 
 " vim2hs, Haskell syntax among other things
- Plugin 'dag/vim2hs'
+ Plug 'dag/vim2hs', { 'for': 'haskell' }
 
 " Haskell completion
- Plugin 'eagletmt/neco-ghc'
+ Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
 
 " Haskell mode
- Plugin 'lukerandall/haskellmode-vim'
+ Plug 'lukerandall/haskellmode-vim', { 'for': 'haskell' }
 
 " Generic Hex colors
-Plugin 'ap/vim-css-color'
+Plug 'ap/vim-css-color', { 'for': 'haskell' }
 
 " Markdown folding
-Plugin 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
