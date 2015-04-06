@@ -7,15 +7,12 @@ set encoding=utf-8
 " Set leader
 let mapleader=','
 
-" let Plug manage bundles
-call plug#begin('~/.vim/bundle')
-
-
-
 " #### BUNDLES ####
+call plug#begin('~/.vim/bundle')
 for file in split(globpath(expand('~/.vim/config'), '*\.vim'), '\n')
   exe 'source' file
 endfor
+call plug#end()
 
 " ##### MAPS ######
 " <leader>W removes trailing whitespace, neat!
@@ -27,12 +24,6 @@ inoremap jj <ESC>
 " Autocomplete like eclipse
 inoremap <C-Space> <C-x><C-o>
 inoremap <C-@>     <C-x><C-o>
-" Nicer command for vertical window splitting
-nnoremap <leader>w <C-w>v<C-w>l
-
-" Tab shortcuts
-nnoremap <right> :tabn<cr>
-nnoremap <left> :tabp<cr>
 
 " wrapped lines navigation
 nnoremap j gj
@@ -41,32 +32,16 @@ nnoremap k gk
 " hlsearch toggle
 nnoremap <F1> :set hlsearch!<cr>
 
-" Toggle NERDTree easily with F3
-nnoremap <F3> :NERDTreeToggle<cr>
-
 " Toggle whitespace characters
 nnoremap <F4> :set list!<cr>
-
-" Tagbar toggle 
-nnoremap <F8> :TagbarToggle<CR>
 
 " Switch lines
 nnoremap - ddp
 
 
-" edit vim
-nnoremap <leader>ev :vsplit ~/.vimrc<CR>
-
-" source vim
-nnoremap <leader>sv :source ~/.vimrc<CR>
-
-
 " ##### EDITOR CONF #####
 " Backspace expected behaviour
 set backspace=indent,eol,start
-
-" Don't be compatible with vi any longer
-
 
 " Hide buffers that aren't visible
 set hidden
@@ -99,7 +74,7 @@ set incsearch
 " Work in screen
 set t_Co=256
 
-" Set up some "/" properties
+" Only match case sensitive when upper case letters are used in searches
 set smartcase
 
 " Set line numbering
@@ -111,45 +86,28 @@ set mousehide
 " Syntax coloring line limiting (large files take too long to load otherwise)
 set synmaxcol=2048
 
-" Set the status line the way I like it
-"set stl=%f\ %m\ %r\ Line:\ %l/%L[%p%%]\ Col:\ %c\ Buf:\ #%n\ [%b][0x%B]
-
-" Indenting
 set smartindent
 
 " Set tab spaces
 set expandtab
-set tabstop=2
-set shiftwidth=2
-
-" Show whitespace
-set listchars=tab:▸\ ,eol:↲,trail:♦
-set list
+set tabstop=4
+set shiftwidth=4
 
 " Set virtualedit up
 set virtualedit=all
 
-" Save folds!
-au BufWinLeave * silent! mkview
-au BufWinEnter * silent! loadview
-
 " Get that filetype stuff happening
 filetype plugin indent on
-
-" Turn on that syntax highlighting
 syntax on
 
 " Always show the status line
 set laststatus=2
 
-set background=light
-
-let g:ycm_server_use_vim_stdout = 1
-let g:ycm_server_log_level = 'debug'
-
+" Syntax highlight debugging tools
 map <F7> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
-call plug#end()
+
 colorscheme Tomorrow
+set background=light

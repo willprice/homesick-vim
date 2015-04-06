@@ -14,4 +14,3 @@ Plug 'guns/jellyx.vim'
 Plug 'chriskempson/vim-tomorrow-theme'
 " Solarized
 Plug 'altercation/vim-colors-solarized'
-
