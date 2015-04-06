@@ -8,8 +8,6 @@ Plug 'tpope/vim-sensible'
 Plug 'terryma/vim-multiple-cursors'
 " HTML DSL
 Plug 'mattn/emmet-vim'
-" Tabular replacement/aligning toolkit
-Plug 'junegunn/vim-easy-align'
 " Easy commenting
 Plug 'scrooloose/nerdcommenter'
 
@@ -26,6 +24,12 @@ Plug 'tpope/vim-surround'
 " ##########################
 " MISCELLANEOUS
 " ##########################
+" Strip trailing whitespace
+Plug 'bronson/vim-trailing-whitespace'
+
+" Support asynchronous commands
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+
 " TDD green toolbar
 Plug 'reinh/vim-makegreen'
 

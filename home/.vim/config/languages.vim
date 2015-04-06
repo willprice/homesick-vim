@@ -23,12 +23,25 @@ Plug 'scrooloose/syntastic'
 
 
 " ##########################
-" JS
+" WEB+JS
 " ##########################
+" ### JS ###
 " Nodeunit vim compiler
 Plug 'lambdalisue/nodeunit.vim'
 " Static JS analysis
 Plug 'marijnh/tern_for_vim', { 'for': 'javascript' }
+
+" ### CSS ###
+" Coffee script
+Plug 'kchmck/vim-coffee-script'
+" LESS
+Plug 'groenewege/vim-less'
+
+" ### HTML ###
+" Jade
+Plug 'digitaltoad/vim-jade'
+" HAML
+Plug 'tpope/vim-haml'
 
 
 " ##########################
@@ -48,10 +61,37 @@ Plug 'klen/python-mode', { 'for': 'python' }
 
 
 " ##########################
-" PROCESSING
+" OTHERS
 " ##########################
 " Run processing sketches from within vim
 Plug 'sophacles/vim-processing'
+" Rust
+Plug 'wting/rust.vim'
+" Elm
+Plug 'lambdatoast/elm.vim'
+" Io
+Plug 'andreimaxim/vim-io'
+" Nimrod
+Plug 'zah/nimrod.vim'
+
+" ### ELECTRONICS ###
+" VHDL
+Plug 'git://gitorious.org/vip/vip.git'
+" GAS assembly
+Plug 'willprice/vim-gas'
+" ### OPS ###
+" SCons
+Plug 'vim-scripts/scons.vim'
+" Ansible YAML
+Plug 'chase/vim-ansible-yaml'
+" Dockerfiles
+Plug 'ekalinin/Dockerfile.vim'
+
+" ### LANGUAGE ENGEERINIG ###
+" ANTLR 4 plugin
+Plug 'jrozner/vim-antlr'
+" ANTLR 3 plguin
+Plug 'vim-scripts/antlr3.vim'
 
 
 " ##########################
@@ -61,3 +101,7 @@ Plug 'sophacles/vim-processing'
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 " Livedown, automatically refresh markdown generated HTML
 Plug 'shime/vim-livedown'
+" Markdown
+Plug 'tpope/vim-markdown', {'name': 'tpope-vim-markdown'}
+" ASCIIDoc
+Plug 'dagwieers/asciidoc-vim'
