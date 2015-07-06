@@ -75,6 +75,9 @@ Plug 'rking/ag.vim'
 " Show 80th column
 Plug 'spacepluk/vim-eighties'
 
+" Session saving
+Plug 'tpope/vim-obsession'
+
 " ##########################
 " TOOLBARS
 " ##########################

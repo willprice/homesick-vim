@@ -4,7 +4,7 @@
 " Generic Hex colors
 Plug 'ap/vim-css-color', { 'for': 'haskell' }
 " Completion for loads of languages
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
 " Syntax checking for most languages (linter)
 Plug 'scrooloose/syntastic'
 
@@ -20,6 +20,8 @@ Plug 'scrooloose/syntastic'
  Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
 " Haskell mode
  Plug 'lukerandall/haskellmode-vim', { 'for': 'haskell' }
+" Haskell code formatter
+" Plug 'nbouscal/vim-stylish-haskell', { 'for': 'haskell' }
 
 
 " ##########################
@@ -33,19 +35,19 @@ Plug 'marijnh/tern_for_vim', { 'for': 'javascript' }
 
 " ### CSS ###
 " Coffee script
-Plug 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 " LESS
-Plug 'groenewege/vim-less'
+Plug 'groenewege/vim-less', { 'for': 'less' }
 
 " ### HTML ###
 " Jade
-Plug 'digitaltoad/vim-jade'
+Plug 'digitaltoad/vim-jade', { 'for': 'html' }
 " HAML
-Plug 'tpope/vim-haml'
+Plug 'tpope/vim-haml', { 'for': 'haml' }
 " HTML5
-Plug 'othree/html5.vim'
+Plug 'othree/html5.vim', { 'for': 'html' }
 " Emmet - expand CSS like selectors into HTML
-Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim', { 'for': 'html' }
 
 
 " ##########################
@@ -68,17 +70,17 @@ Plug 'klen/python-mode', { 'for': 'python' }
 " OTHERS
 " ##########################
 " Run processing sketches from within vim
-Plug 'sophacles/vim-processing'
+Plug 'sophacles/vim-processing', { 'for': 'processing' }
 " Rust
-Plug 'wting/rust.vim'
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 " Elm
-Plug 'lambdatoast/elm.vim'
+Plug 'lambdatoast/elm.vim', { 'for': 'elm' }
 " Io
-Plug 'andreimaxim/vim-io'
+Plug 'andreimaxim/vim-io', { 'for': 'io' }
 " Nimrod
-Plug 'zah/nimrod.vim'
+Plug 'zah/nimrod.vim', { 'for': 'nim' }
 " Go
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'for': 'go' }
 
 " ### ELECTRONICS ###
 " VHDL
