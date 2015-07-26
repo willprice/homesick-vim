@@ -94,6 +94,8 @@ Plug 'vim-scripts/scons.vim'
 Plug 'chase/vim-ansible-yaml'
 " Dockerfiles
 Plug 'ekalinin/Dockerfile.vim'
+" DB extenstions
+Plug 'vim-scripts/dbext.vim'
 
 " ### LANGUAGE ENGEERINIG ###
 " ANTLR 4 plugin
